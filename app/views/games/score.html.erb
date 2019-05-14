@@ -1,0 +1,28 @@
+<h1>Result</h1>
+
+<h3>Your answer:</h3>
+<!-- <p><%= @answer %></p> -->
+<ol>
+<% @answer.split('').each do |letter| %>
+  <li> <%= letter %> </li>
+<% end %>
+</ol>
+
+<h3>Your letters:</h3>
+<ol>
+<% @random_letters.each do |letter| %>
+  <li> <%= letter %> </li>
+<% end %>
+</ol>
+
+<h3>Result:</h3>
+<p><%= @outcome %></p>
+
+<h3>Your score:</h3>
+<p><%= @score %></p>
+
+<h3>Your running score:</h3>
+<p><%= session[:score] %></p>
+
+<%= link_to 'Play again', '/' %>
+
